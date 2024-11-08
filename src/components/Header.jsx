@@ -27,25 +27,42 @@ const Header = () => {
     };
   }, []);
 
+  const [activeLink, setActiveLink] = useState("Home");
+
   return (
     <>
       <header className="headerPadding flexCol">
         <nav className="flexRow justify-between">
           <img src="/assets/logo.svg" alt="" />
           <ul className="flexRow">
-            <li>
+            <li
+              className={`${activeLink === "Home" ? "activeLink" : ""}`}
+              onClick={() => setActiveLink("Home")}
+            >
               <a href="#">Home</a>
             </li>
-            <li>
+            <li
+              className={`${activeLink === "About" ? "activeLink" : ""}`}
+              onClick={() => setActiveLink("About")}
+            >
               <a href="#">About Us</a>
             </li>
-            <li>
+            <li
+              className={`${activeLink === "Courses" ? "activeLink" : ""}`}
+              onClick={() => setActiveLink("Courses")}
+            >
               <a href="#">Courses</a>
             </li>
-            <li>
+            <li
+              className={`${activeLink === "Teachers" ? "activeLink" : ""}`}
+              onClick={() => setActiveLink("Teachers")}
+            >
               <a href="#">Our Teachers</a>
             </li>
-            <li>
+            <li
+              className={`${activeLink === "Faq" ? "activeLink" : ""}`}
+              onClick={() => setActiveLink("Faq")}
+            >
               <a href="#">FAQ</a>
             </li>
           </ul>
