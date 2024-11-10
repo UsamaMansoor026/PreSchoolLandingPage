@@ -295,7 +295,7 @@ nav div {
 }
 
 .parallex_img {
-  background: url("/assets/heroBg.jpg");
+  background: var(--parallexBg);
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
@@ -403,6 +403,24 @@ nav div {
 }
 
 /* Hero Sub section */
+.subHeading_wrapper {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.col-5 {
+  grid-column: 1/6;
+  line-height: 1.2;
+}
+
+.section_innerWrapper {
+  border: 1px solid black;
+  padding: 26px 40px;
+  margin-block: 70px;
+  border-radius: 14px;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.3);
+}
+
 .cards_container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

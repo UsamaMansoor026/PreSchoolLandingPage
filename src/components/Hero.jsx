@@ -1,11 +1,16 @@
 import React from "react";
 import Button from "./Button";
+import { cardsData } from "../constants/constants";
+import InfoCard from "./InfoCard";
 
 const Hero = () => {
   return (
     <>
       <section className="heroSection">
-        <div className="parallex_img"></div>
+        <div
+          className="parallex_img"
+          style={{ "--parallexBg": "url('/assets/heroBg.jpg')" }}
+        ></div>
         <div className="heroSection_content">
           <div className="heroSection_content_wrapper">
             <div className="leftPortion">
@@ -31,10 +36,18 @@ const Hero = () => {
 
       {/* Hero Sub Section */}
       <section className="subSection">
-        <div>
-          <h2 className="sectionHeading">Unique Learning Environment</h2>
+        <div className="section_innerWrapper">
+          <div className="subHeading_wrapper">
+            <h2 className="sectionHeading col-5">
+              Unique Learning Environment
+            </h2>
+          </div>
 
-          <div className="cards_container"></div>
+          <div className="cards_container">
+            {cardsData?.map((data) => {
+              return <InfoCard data={data} />;
+            })}
+          </div>
         </div>
       </section>
     </>
