@@ -15,7 +15,7 @@ export const cardsData = [
   },
   {
     id: 3,
-    title: "Cutr Environment",
+    title: "Cute Environment",
     icon: "/assets/orangeStar.svg",
     bgColor: "var(--yellowish)",
     content:

@@ -125,6 +125,10 @@ a {
   border-color: var(--pinkish);
 }
 
+.font-semibold {
+  font-weight: 600;
+}
+
 /* Header Styling */
 header {
   gap: 14px;
@@ -362,6 +366,57 @@ nav div {
   line-height: 1.05;
 }
 
+/* Hero Sub section */
+.subHeading_wrapper {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.col-5 {
+  grid-column: 1/6;
+  line-height: 1.2;
+}
+
+.section_innerWrapper {
+  /* border: 1px solid black; */
+  padding: 32px 40px;
+  margin-block: 70px;
+  border-radius: 14px;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+.cards_container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 17px;
+  align-items: center;
+  margin-block: 20px;
+}
+
+.info_card {
+  display: flex;
+  align-items: start;
+  gap: 14px;
+  padding: 50px 30px;
+  /* height: 180px; */
+  border-radius: 14px;
+  background-color: var(--infoCard-bgColor);
+  box-shadow: 0 2px 5px var(--infoCard-bgColor);
+}
+
+.info_card_img img {
+  width: 30px;
+}
+
+.info_card_content {
+  gap: 14px;
+}
+
+.info_card_content p {
+  font-size: 15px;
+  width: 90%;
+}
+
 /* Media Queries */
 @media (max-width: 968px) {
   nav ul,
@@ -384,6 +439,15 @@ nav div {
   .rightPortion {
     display: none;
   }
+
+  /* Hero Sub Section */
+  .cards_container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .info_card {
+    min-height: 210px;
+  }
 }
 
 @media (max-width: 680px) {
@@ -394,36 +458,44 @@ nav div {
   .leftPortion div {
     justify-content: center;
   }
+
+  .sectionHeading {
+    font-size: 30px;
+  }
+
+  .col-5 {
+    grid-column: 1/10;
+  }
+
+  .subSection {
+    padding-inline: 20px;
+  }
+
+  .cards_container {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 522px) {
   .leftPortion h1 {
     font-size: 49px !important;
   }
+
+  .info_card {
+    flex-direction: column;
+  }
+
+  .info_card_content p {
+    width: 100%;
+  }
 }
 
-/* Hero Sub section */
-.subHeading_wrapper {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-}
+@media (max-width: 430px) {
+  .subSection {
+    padding-inline: 10px;
+  }
 
-.col-5 {
-  grid-column: 1/6;
-  line-height: 1.2;
-}
-
-.section_innerWrapper {
-  border: 1px solid black;
-  padding: 26px 40px;
-  margin-block: 70px;
-  border-radius: 14px;
-  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.3);
-}
-
-.cards_container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 17px;
-  align-items: center;
+  .sectionHeading {
+    font-size: 28px;
+  }
 }
