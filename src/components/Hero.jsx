@@ -6,7 +6,7 @@ import InfoCard from "./InfoCard";
 const Hero = () => {
   return (
     <>
-      <section className="heroSection">
+      <section className="parallexSection">
         <div
           className="parallex_img"
           style={{ "--parallexBg": "url('/assets/heroBg.jpg')" }}

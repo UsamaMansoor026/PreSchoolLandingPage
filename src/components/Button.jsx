@@ -6,7 +6,10 @@ const Button = ({ children, bgColor, textColor }) => {
       className={`btn ${
         bgColor === "var(--pinkish)" ? "primaryBtn" : "secBtn"
       }`}
-      style={{ "--bgColor": bgColor, "--foreColor": textColor }}
+      style={{
+        "--bgColor": bgColor,
+        "--foreColor": textColor,
+      }}
     >
       {children}
     </div>
