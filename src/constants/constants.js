@@ -70,3 +70,12 @@ export const teachersData = [
     profileImg: "/assets/teacher4.jpg",
   },
 ];
+
+export const schoolPhotos = {
+  one: "/assets/carousal1.jpg",
+  two: "/assets/carousal2.jpg",
+  three: "/assets/carousal3.jpg",
+  four: "/assets/carousal4.jpg",
+  five: "/assets/carousal5.jpg",
+  six: "/assets/carousal6.jpg",
+};
