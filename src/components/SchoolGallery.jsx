@@ -1,16 +1,21 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { schoolPhotos } from "../constants/constants";
 import { HiOutlineArrowSmLeft, HiOutlineArrowSmRight } from "react-icons/hi";
 
 const SchoolGallery = () => {
-  const slider = document.querySelector(".sliderImages");
+  const [imageSlider, setImageSlider] = useState();
+
+  useEffect(() => {
+    const slider = document.querySelector(".sliderImages");
+    setImageSlider(slider);
+  }, []);
 
   const nextSlide = () => {
-    slider.append(slider.querySelector("img:first-child"));
+    imageSlider?.append(imageSlider.querySelector("img:first-child"));
   };
 
   const prevSlide = () => {
-    slider.prepend(slider.querySelector("img:last-child"));
+    imageSlider?.prepend(imageSlider.querySelector("img:last-child"));
   };
 
   useEffect(() => {
