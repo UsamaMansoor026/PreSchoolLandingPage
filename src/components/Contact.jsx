@@ -42,9 +42,9 @@ const Contact = () => {
       </form>
 
       {/* Social Links */}
-      <div className="right_image">
+      {/* <div className="right_image">
         <img src="/assets/gallery2.jpg" alt="" />
-      </div>
+      </div> */}
     </div>
   );
 };
