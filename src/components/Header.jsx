@@ -60,15 +60,16 @@ const Header = () => {
               <a href="#">Our Teachers</a>
             </li>
             <li
-              className={`${activeLink === "Faq" ? "activeLink" : ""}`}
-              onClick={() => setActiveLink("Faq")}
+              className={`${activeLink === "contact us" ? "activeLink" : ""}`}
+              onClick={() => setActiveLink("contact us")}
             >
-              <a href="#">FAQ</a>
+              <a href="#">Contact Us</a>
             </li>
           </ul>
 
           <div className="flexRow btnContainer">
             <button>Contact Us</button>
+
             <button type="button" onClick={() => setShowLoginPopUp(true)}>
               Login
             </button>

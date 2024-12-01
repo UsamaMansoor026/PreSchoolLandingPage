@@ -191,7 +191,8 @@ nav div {
   padding-inline: 60px;
 }
 
-.btnContainer button {
+.btnContainer button,
+.conTactUsBtn {
   background-color: var(--pinkish);
   color: white;
   border: 1px solid var(--pinkish);
@@ -204,7 +205,8 @@ nav div {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
-.btnContainer button:hover {
+.btnContainer button:hover,
+.conTactUsBtn:hover {
   background-color: var(--white);
   color: var(--black);
   border-color: var(--white);
@@ -469,7 +471,7 @@ nav div {
 .teacher_card {
   background-color: var(--light-gray);
   display: flex;
-  min-width: 26%;
+  min-width: 300px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -539,17 +541,14 @@ nav div {
 }
 
 /* Contact Us */
-.contactUs {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 70px;
-}
-
 .contactUs form {
   border-radius: 20px;
   border: 1px solid var(--light-pink);
   padding: 18px 26px;
   box-shadow: 0px 2px 5px var(--pinkish);
+  max-width: 70%;
+  width: 100%;
+  margin-inline: auto;
 }
 
 form .form_input_wrapper,
@@ -570,7 +569,7 @@ form .form_button_wrapper {
 .form_input_wrapper textarea {
   width: 100%;
   outline: none;
-  padding: 8px 14px;
+  padding: 12px 14px;
   background: transparent;
   border: 1px solid var(--pinkish);
   border-radius: 8px;
@@ -582,7 +581,7 @@ form .form_button_wrapper {
 }
 
 .form_button_wrapper button {
-  padding: 8px 14px;
+  padding: 12px 14px;
   border-radius: 6px;
   border: 1px solid var(--pinkish);
   background: var(--light-pink);
@@ -606,6 +605,43 @@ form .form_button_wrapper {
   aspect-ratio: 1;
   object-fit: cover;
   border-radius: 20px;
+}
+
+/* Footer */
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 50px;
+  padding: 26px 100px;
+}
+
+footer .footer_logo_part {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+}
+
+.footer_logo_part img {
+  width: 40px;
+}
+
+.footer_info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer_info div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer_info div span {
+  margin-top: 6px;
+  color: var(--pinkish);
 }
 
 /* Media Queries */
@@ -645,6 +681,12 @@ form .form_button_wrapper {
   }
 }
 
+@media (max-width: 851px) {
+  .contactUs form {
+    max-width: 85%;
+  }
+}
+
 @media (max-width: 680px) {
   .leftPortion h1 {
     font-size: 60px !important;
@@ -675,6 +717,11 @@ form .form_button_wrapper {
   .sliderImages img {
     aspect-ratio: 1;
   }
+
+  footer {
+    flex-direction: column;
+    gap: 20px;
+  }
 }
 
 @media (max-width: 522px) {
@@ -689,6 +736,10 @@ form .form_button_wrapper {
   .info_card_content p {
     width: 100%;
   }
+
+  .contactUs form {
+    max-width: 100%;
+  }
 }
 
 @media (max-width: 430px) {
@@ -698,5 +749,11 @@ form .form_button_wrapper {
 
   .sectionHeading {
     font-size: 28px;
+  }
+}
+
+@media (max-width: 417px) {
+  .teacher_card {
+    min-width: 100%;
   }
 }
