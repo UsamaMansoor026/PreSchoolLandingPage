@@ -20,8 +20,13 @@
   font-family: "Kiwi Maru", serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 ul {
@@ -131,6 +136,13 @@ a {
 
 .font-semibold {
   font-weight: 600;
+}
+
+#teachers,
+#about,
+#courses,
+#contact {
+  scroll-margin-top: 70px;
 }
 
 /* Header Styling */

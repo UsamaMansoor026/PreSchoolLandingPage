@@ -29,6 +29,30 @@ const Header = () => {
 
   const [activeLink, setActiveLink] = useState("Home");
 
+  useEffect(() => {
+    let sections = document.querySelectorAll("section");
+    let navLinks = document.querySelectorAll("nav ul li a");
+
+    window.onscroll = () => {
+      sections.forEach((sec) => {
+        let top = window.scrollY;
+        let offset = sec.offsetTop - 150;
+        let height = sec.offsetHeight;
+        let id = sec.getAttribute("id");
+
+        if (top >= offset && top < offset + height) {
+          navLinks.forEach((link) => {
+            link.classList.remove("activeLink");
+            setActiveLink(id);
+            document
+              .querySelector("nav ul li a[href*=" + id + "]")
+              .classList.add("activeLink");
+          });
+        }
+      });
+    };
+  }, []);
+
   return (
     <>
       <header className="headerPadding flexCol">
@@ -36,34 +60,34 @@ const Header = () => {
           <img src="/assets/logo.svg" alt="" />
           <ul className="flexRow">
             <li
-              className={`${activeLink === "Home" ? "activeLink" : ""}`}
-              onClick={() => setActiveLink("Home")}
+              className={`${activeLink === "home" ? "activeLink" : ""}`}
+              onClick={() => setActiveLink("home")}
             >
               <a href="#">Home</a>
             </li>
             <li
-              className={`${activeLink === "About" ? "activeLink" : ""}`}
-              onClick={() => setActiveLink("About")}
+              className={`${activeLink === "about" ? "activeLink" : ""}`}
+              onClick={() => setActiveLink("about")}
             >
-              <a href="#">About Us</a>
+              <a href="#about">About Us</a>
             </li>
             <li
-              className={`${activeLink === "Courses" ? "activeLink" : ""}`}
-              onClick={() => setActiveLink("Courses")}
+              className={`${activeLink === "courses" ? "activeLink" : ""}`}
+              onClick={() => setActiveLink("courses")}
             >
-              <a href="#">Courses</a>
+              <a href="#courses">Courses</a>
             </li>
             <li
-              className={`${activeLink === "Teachers" ? "activeLink" : ""}`}
-              onClick={() => setActiveLink("Teachers")}
+              className={`${activeLink === "teachers" ? "activeLink" : ""}`}
+              onClick={() => setActiveLink("teachers")}
             >
-              <a href="#">Our Teachers</a>
+              <a href="#teachers">Our Teachers</a>
             </li>
             <li
-              className={`${activeLink === "contact us" ? "activeLink" : ""}`}
-              onClick={() => setActiveLink("contact us")}
+              className={`${activeLink === "contact" ? "activeLink" : ""}`}
+              onClick={() => setActiveLink("contact")}
             >
-              <a href="#">Contact Us</a>
+              <a href="#contact">Contact Us</a>
             </li>
           </ul>
 
@@ -90,20 +114,50 @@ const Header = () => {
         {/* Mobile Nav */}
         {showMobileNav && (
           <ul className="mobileNav">
-            <li>
-              <a href="#">Home</a>
+            <li
+              className={`${activeLink === "home" ? "activeLink" : ""}`}
+              onClick={() => {
+                setShowMobileNav(!showMobileNav);
+                setActiveLink("home");
+              }}
+            >
+              <a href="#home">Home</a>
             </li>
-            <li>
-              <a href="#">About Us</a>
+            <li
+              className={`${activeLink === "about" ? "activeLink" : ""}`}
+              onClick={() => {
+                setShowMobileNav(!showMobileNav);
+                setActiveLink("about");
+              }}
+            >
+              <a href="#about">About Us</a>
             </li>
-            <li>
-              <a href="#">Courses</a>
+            <li
+              className={`${activeLink === "courses" ? "activeLink" : ""}`}
+              onClick={() => {
+                setShowMobileNav(!showMobileNav);
+                setActiveLink("courses");
+              }}
+            >
+              <a href="#courses">Courses</a>
             </li>
-            <li>
-              <a href="#">Our Teachers</a>
+            <li
+              className={`${activeLink === "teachers" ? "activeLink" : ""}`}
+              onClick={() => {
+                setShowMobileNav(!showMobileNav);
+                setActiveLink("teachers");
+              }}
+            >
+              <a href="#teachers">Our Teachers</a>
             </li>
-            <li>
-              <a href="#">FAQ</a>
+            <li
+              className={`${activeLink === "contact" ? "activeLink" : ""}`}
+              onClick={() => {
+                setShowMobileNav(!showMobileNav);
+                setActiveLink("contact");
+              }}
+            >
+              <a href="#contact">Contact Us</a>
             </li>
             <li>
               <button type="button" className="conTactUsBtn">

@@ -6,7 +6,7 @@ import InfoCard from "./InfoCard";
 const Hero = () => {
   return (
     <>
-      <section className="parallexSection">
+      <section id="home" className="parallexSection">
         <div
           className="parallex_img"
           style={{ "--parallexBg": "url('/assets/heroBg.jpg')" }}
@@ -35,7 +35,7 @@ const Hero = () => {
       </section>
 
       {/* Hero Sub Section */}
-      <section className="subSection">
+      <section id="about" className="subSection">
         <div className="section_innerWrapper">
           <div className="subHeading_wrapper">
             <h2 className="sectionHeading col-5">

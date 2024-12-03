@@ -4,7 +4,11 @@ import Button from "./Button";
 
 const Packages = () => {
   return (
-    <div className="subSection parallexSection" style={{ minHeight: "500px" }}>
+    <section
+      id="courses"
+      className="subSection parallexSection"
+      style={{ minHeight: "500px" }}
+    >
       <div
         className="parallex_img"
         style={{ "--parallexBg": "url('/assets/gallery1.jpg')" }}
@@ -36,7 +40,7 @@ const Packages = () => {
           </article>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -4,14 +4,16 @@ export const cardsData = [
     title: "Expert Teachers",
     icon: "/assets/purpleStar.svg",
     bgColor: "var(--light-pink)",
-    content: "Eget amet facilisi pellentesque habitant maecenas.",
+    content:
+      "Our skilled educators inspire curiosity and a lifelong love of learning in every child.",
   },
   {
     id: 2,
     title: "Children Safety",
     icon: "/assets/cyanStar.svg",
     bgColor: "var(--greenish)",
-    content: "Nulla lacus mi, interdum nec nisl nec, vulputate egestas ligula.",
+    content:
+      "We ensure a secure, nurturing environment where your child feels safe and cared for.",
   },
   {
     id: 3,
@@ -19,7 +21,7 @@ export const cardsData = [
     icon: "/assets/orangeStar.svg",
     bgColor: "var(--yellowish)",
     content:
-      "Aliquam vitae mi et augue pellentesque sodales non sit amet turpis.",
+      "Our cheerful, child-friendly spaces make learning fun and welcoming for every little one.",
   },
 ];
 
@@ -28,19 +30,19 @@ export const packagesData = [
     id: 1,
     icon: "/assets/orangeStar.svg",
     title: "basic",
-    desc: "Morbi gravida lectus in vehicula placerat. Phasellus eget magna leo. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi a euismod velit.",
+    desc: "Introduce your child to a world of discovery with our Basic program, designed to build foundational skills through play-based learning. Perfect for little ones just starting their educational journey.",
   },
   {
     id: 2,
     icon: "/assets/cyanStar.svg",
     title: "Standard",
-    desc: "Morbi gravida lectus in vehicula placerat. Phasellus eget magna leo. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi a euismod velit.",
+    desc: "Take the next step with our Standard program, offering a balanced curriculum that nurtures academic growth, social skills, and creativity. Ideal for children ready to explore and thrive and gain experience.",
   },
   {
     id: 3,
     icon: "/assets/purpleStar.svg",
     title: "Premium",
-    desc: "Morbi gravida lectus in vehicula placerat. Phasellus eget magna leo. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi a euismod velit.",
+    desc: "Unlock your child’s full potential with our Premium program, featuring advanced learning opportunities, personalized attention, and exclusive activities for a well-rounded experience.",
   },
 ];
 
