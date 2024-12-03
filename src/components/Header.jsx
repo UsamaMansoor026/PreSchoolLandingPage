@@ -27,7 +27,7 @@ const Header = () => {
     };
   }, []);
 
-  const [activeLink, setActiveLink] = useState("Home");
+  const [activeLink, setActiveLink] = useState("home");
 
   useEffect(() => {
     let sections = document.querySelectorAll("section");
@@ -42,11 +42,11 @@ const Header = () => {
 
         if (top >= offset && top < offset + height) {
           navLinks.forEach((link) => {
-            link.classList.remove("activeLink");
+            // link.classList.remove("activeLink");
             setActiveLink(id);
-            document
-              .querySelector("nav ul li a[href*=" + id + "]")
-              .classList.add("activeLink");
+            // document
+            //   .querySelector("nav ul li a[href*=" + id + "]")
+            //   .classList.add("activeLink");
           });
         }
       });
